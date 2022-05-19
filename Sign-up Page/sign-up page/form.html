@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form validation</title>
+        <link rel="stylesheet" href="form.css">
+        <script src="form.js"></script>
+        
+    </head>
+    <body>
+        <div class="title">
+            <h2>Registration Form</h2>
+
+            <form id="regform" onsubmit="return validateform()">
+                <div class="input-field">
+                    <label class="name" >First Name:</label>
+                    <input type="text"  id="fname" required onchange="maxchar()">       
+                </div>
+
+                
+                <div class="input-field">
+                    <label class="name" >Last Name:</label>
+                    <input type="text"  id="lname"  required onchange="maxchar()">    
+                </div>
+                <div id="error-name" class="hide err"></div>                
+                
+                <div class="input-field">
+                    <label class="name" >Date of Birth:</label><br>
+                    <input type="date"  id="DOB" onchange="calAge()">    
+                </div>
+                
+                <div class="input-field">
+                    <label class="name" >Age:</label>
+                    <input type="text" disabled id="Age">    
+                </div>
+               
+                <div class="input-field">
+                    <label class="name" >Address:</label>
+                    <input type="text"id="Address">    
+                </div>
+              
+                <div class="input-field">
+                    <label class="name" >Email: </label>
+                    <input type="text"  id="email" required onchange="validemail()">    
+                </div>
+                <div id="error-email" class="hide err"></div>
+               
+                <div class="input-field">
+                    <label class="name" >Username:</label>
+                    <input type="text"  id="Uname" required onchange="validusername()">    
+                </div>
+                <div id="error-uname" class="hide err"></div>
+
+                <div class="input-field">
+                    <label class="name" >Password:</label>
+                    <input type="password" id="pswd" required onchange="validpassword()">    
+                </div>
+                <div id="error-password" class="hide err"></div>
+
+                <div class="input-field">
+                    <label class="name" >Confirm Password:</label>
+                    <input type="password"  id="Conpass" required onchange="matchpassword()">    
+                </div>
+                <div id="error-matchpassword" class="hide err"></div>
+
+                <div class="input-field">
+                <input type="checkbox" name="agree" id="agree" required onchange="condition()">
+                <label style ="color:red; font-size: 18px; ">I agree the terms and conditions of the University.</label>
+                </div>
+                
+
+                
+                <div class="btn">
+                    <input type="submit" value="submit" id="subbtn" disabled>   
+                </div>
+
+                <div id="error" class="hide"></div>
+
+
+
+            </form>
+
+            
+           
+            
+        </div>
+    </body>
+</html>
